@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sboot-k8s
+spec:
+  selector:
+    matchLabels:
+      app: sboot-k8s
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sboot-k8s
+    spec:
+      containers:
+        - name: mysbootcontainer
+          image: spring:2.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8091

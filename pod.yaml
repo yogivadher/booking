@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sboot-k8s
+spec:
+  containers:
+    - name: mysbootcontainer
+      image: mysbootcontainer:latest
